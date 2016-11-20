@@ -4,12 +4,13 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 <head>
 <meta charset="UTF-8"></meta>
-<title>Insert title here</title>
+<title>JSF - Ankieta</title>
 </head>
 <body>
+<h2>Ankieta</h2>
 
-<h:form>
-<h:outputText value="Czy lubisz nasza strone?:"></h:outputText>
+	<h:form>
+		<h:outputText value="Czy lubisz nasza strone?"></h:outputText><br/>
 		<h:selectOneMenu value="#{like.like}"
 						 valueChangeListener="#{like.check}"
 						 onchange="submit()">
@@ -19,7 +20,28 @@
 		</h:selectOneMenu><br/>
 
 		<h:outputText value="#{like.message}"></h:outputText>
-</h:form>
+	</h:form><br/>
+	
+	<h:outputText value="Jesli masz ochote napisz dluzsza opinie (min. 20, max. 50 znakow)"></h:outputText><br/>
+	<h:form>
+		<h:inputTextarea id="opinion" value="#{like.opinion}"></h:inputTextarea>
+		<h:outputText id="outputMessage" value="#{like.feedback}"/><br/>
+		<h:commandButton value="Przeslij">
+	         <f:ajax execute="opinion" render="outputMessage" />
+	     </h:commandButton>     
+	</h:form><br/>
+	
+	
+		<h:outputText value="Chcesz dostawac informacje o stronie?"></h:outputText><br/>
+		<h:outputText value="Wpisz e-mail:"></h:outputText><br/>
+	<h:form>
+		<h:inputText id="email" value="#{email.email}"></h:inputText>
+		<h:outputText id="outputMessage" value="#{email.message}"/><br/>
+		<h:commandButton value="Waliduj email">
+	         <f:ajax execute="email" render="outputMessage" />
+	     </h:commandButton>     
+	</h:form>
+	
 
 </body>
 </html>

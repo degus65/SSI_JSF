@@ -12,7 +12,7 @@ public class User {
 	private String haslo;
 	private String plec;
 	private String miasto;
-	private String wojewodztwo;
+	private String wojewodztwo="malopolskie";
 	
 	public String getLogin() {
 		return login;
