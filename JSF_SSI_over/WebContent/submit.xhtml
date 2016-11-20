@@ -3,10 +3,14 @@
 	xmlns:p="http://java.sun.com/jsf/core">
 <head>
 <meta charset="UTF-8"></meta>
-
-<title>Insert title here</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>JSF</title>
 </head>
 <body>
+	<!--  
 	<h:outputText value="Login: "></h:outputText>
 	<h:outputText value="#{User.login}"></h:outputText><br/>
 	<h:outputText value="Plec: "></h:outputText>
@@ -15,5 +19,40 @@
 	<h:outputText value="#{User.miasto}"></h:outputText><br/>
 	<h:outputText value="Zainteresowania: "></h:outputText>
 	<h:outputText value="#{Zainteresowania.zainteresowanie}"></h:outputText><br/>
+	 -->
+	
+	
+<div class="container">
+  <h2>Sumbit Page</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nazwa</th>
+        <th>Wartosc</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Login</td>
+        <td><h:outputText value="#{User.login}"></h:outputText></td>
+      </tr>
+      <tr>
+        <td>Plec:</td>
+        <td><h:outputText value="#{User.plec}"></h:outputText></td>
+      </tr>
+      <tr>
+        <td>Miasto</td>
+        <td><h:outputText value="#{User.miasto}"></h:outputText></td>
+      </tr> 
+      <tr>
+        <td>Zainteresowania</td>
+        <td><h:outputText value="#{Zainteresowania.zainteresowanie}"></h:outputText></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+	
+	
+	
 </body>
 </html>
