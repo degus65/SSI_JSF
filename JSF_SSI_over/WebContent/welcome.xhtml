@@ -66,13 +66,14 @@
 		
 		
 		<br /><br />
-		<h:outputText id="selectManyMenu" value="Zainteresowania:"></h:outputText>
-		<h:selectManyMenu value="#{Zainteresowania.zainteresowanie}">
+		<h:outputText  value="Zainteresowania:"></h:outputText>
+		<h:selectManyMenu value="#{Zainteresowania.zainteresowanie}"  required="true" requiredMessage="Pole wymagane" id="selectManyMenu" style="height: 79px; ">
 			<p:selectItem itemLabel="pilkaNozna" itemValue="pilkaNozna" id="i1"></p:selectItem>
 			<p:selectItem itemLabel="koszykowka" itemValue="koszykowka" id="i2"></p:selectItem>
 			<p:selectItem itemLabel="siatkowka" itemValue="siatkowka" id="i3"></p:selectItem>
 			<p:selectItem itemLabel="jedzenie" itemValue="jedzenie" id="i4"></p:selectItem>
 		</h:selectManyMenu>
+		<br /><h:message for="selectManyMenu" style="color:red" />
 		
 		<br /><br />
 		
