@@ -26,7 +26,8 @@
 						id="loginInput"  
 						requiredMessage="Login jest wymagany" 
 						validatorMessage="Login powienien byc dluzszy niz 3 znaki i krotszy niz 8" 
-						style="width: 300px">
+						style="width: 300px"
+						>
 						 
 			<f:validateLength minimum="3" maximum="8" /> 
 		</h:inputText>
@@ -57,14 +58,17 @@
 		<br />
 
 		<h:outputText value="Miasto:"></h:outputText>
-		<h:selectOneMenu value="#{User.miasto}">
+		<h:selectOneMenu value="#{User.miasto}"
+						 valueChangeListener="#{User.setState}"
+						 onchange="submit()">
 			<p:selectItem itemLabel="Krakow" itemValue="Krakow"></p:selectItem>
 			<p:selectItem itemLabel="Warszawa" itemValue="Warszawa"></p:selectItem>
 			<p:selectItem itemLabel="Gdansk" itemValue="Gdansk"></p:selectItem>
 			<p:selectItem itemLabel="Poznan" itemValue="Poznan"></p:selectItem>
-		</h:selectOneMenu>
-		
-		
+		</h:selectOneMenu><br/>
+
+		<h:outputText value="Wojewodztwo: "></h:outputText>
+		<h:outputText value="#{User.wojewodztwo}"></h:outputText>
 		<br /><br />
 		<h:outputText  value="Zainteresowania:"></h:outputText>
 		<h:selectManyMenu value="#{Zainteresowania.zainteresowanie}"  required="true" requiredMessage="Pole wymagane" id="selectManyMenu" style="height: 79px; ">

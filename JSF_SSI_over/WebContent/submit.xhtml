@@ -10,17 +10,6 @@
 <title>JSF</title>
 </head>
 <body>
-	<!--  
-	<h:outputText value="Login: "></h:outputText>
-	<h:outputText value="#{User.login}"></h:outputText><br/>
-	<h:outputText value="Plec: "></h:outputText>
-	<h:outputText value="#{User.plec}"></h:outputText><br/>
-	<h:outputText value="Miasto: "></h:outputText>
-	<h:outputText value="#{User.miasto}"></h:outputText><br/>
-	<h:outputText value="Zainteresowania: "></h:outputText>
-	<h:outputText value="#{Zainteresowania.zainteresowanie}"></h:outputText><br/>
-	 -->
-	
 	
 <div class="container">
   <h2>Sumbit Page</h2>
@@ -45,12 +34,19 @@
         <td><h:outputText value="#{User.miasto}"></h:outputText></td>
       </tr> 
       <tr>
+        <td>Wojewodztwo</td>
+        <td><h:outputText value="#{User.wojewodztwo}"></h:outputText></td>
+      </tr> 
+      <tr>
         <td>Zainteresowania</td>
         <td><h:outputText value="#{Zainteresowania.zainteresowanie}"></h:outputText></td>
       </tr>
     </tbody>
   </table>
 </div>
+<h:form>
+<h:commandButton action="survey" class="btn btn-primary btn-md"  value="Wypelnij ankiete!"></h:commandButton>
+</h:form>
 	
 	
 	

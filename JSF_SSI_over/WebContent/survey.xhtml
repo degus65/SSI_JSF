@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://java.sun.com/jsf/core"
+	xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<meta charset="UTF-8"></meta>
+<title>Insert title here</title>
+</head>
+<body>
+
+<h:form>
+<h:outputText value="Czy lubisz nasza strone?:"></h:outputText>
+		<h:selectOneMenu value="#{like.like}"
+						 valueChangeListener="#{like.check}"
+						 onchange="submit()">
+			<p:selectItem itemLabel="" itemValue=""></p:selectItem>
+			<p:selectItem itemLabel="Tak" itemValue="Tak"></p:selectItem>
+			<p:selectItem itemLabel="Nie" itemValue="Nie"></p:selectItem>
+		</h:selectOneMenu><br/>
+
+		<h:outputText value="#{like.message}"></h:outputText>
+</h:form>
+
+</body>
+</html>
