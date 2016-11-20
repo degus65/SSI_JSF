@@ -41,12 +41,12 @@
 		
 		
 		<br /><br />
-		<h:outputText value="Zainteresowania:"></h:outputText>
-		<h:selectManyMenu >
-			<p:selectItem itemLabel="pilkaNozna" itemValue="pilkaNozna" id="pilkaNozna"></p:selectItem>
-			<p:selectItem itemLabel="koszykowka" itemValue="koszykowka" id="koszykowka"></p:selectItem>
-			<p:selectItem itemLabel="siatkowka" itemValue="siatkowka" id="siatkowka"></p:selectItem>
-			<p:selectItem itemLabel="jedzenie" itemValue="jedzenie" id="jedzenie"></p:selectItem>
+		<h:outputText id="selectManyMenu" value="Zainteresowania:"></h:outputText>
+		<h:selectManyMenu value="#{Zainteresowania.zainteresowanie}">
+			<p:selectItem itemLabel="pilkaNozna" itemValue="pilkaNozna" id="i1"></p:selectItem>
+			<p:selectItem itemLabel="koszykowka" itemValue="koszykowka" id="i2"></p:selectItem>
+			<p:selectItem itemLabel="siatkowka" itemValue="siatkowka" id="i3"></p:selectItem>
+			<p:selectItem itemLabel="jedzenie" itemValue="jedzenie" id="i4"></p:selectItem>
 		</h:selectManyMenu>
 		
 		<br /><br />
