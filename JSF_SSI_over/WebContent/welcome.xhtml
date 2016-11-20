@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css"></link>
 </h:head>
 <h:body>
 
@@ -19,9 +20,9 @@
 			style="width: 277px; height: 114px; "></h:graphicImage> <br />
 			
 		<h:outputText value="Login:"></h:outputText>
-		<h:inputText value="#{User.login}"></h:inputText> <br />
+		<h:inputText class="form-control" value="#{User.login}"></h:inputText> <br />
 		<h:outputText value="Haslo:"></h:outputText>
-		<h:inputSecret value="#{User.haslo}"></h:inputSecret>	<br /><br />
+		<h:inputSecret  class="form-control" value="#{User.haslo}"></h:inputSecret>	<br /><br />
 		
 		<h:outputText value="Plec:"></h:outputText>
 		<h:selectOneRadio value="#{User.plec}">
@@ -41,7 +42,7 @@
 		
 		<br /><br />
 		<h:outputText value="Zainteresowania:"></h:outputText>
-		<h:selectManyMenu id="football" value="pilkaNozna">
+		<h:selectManyMenu >
 			<p:selectItem itemLabel="pilkaNozna" itemValue="pilkaNozna" id="pilkaNozna"></p:selectItem>
 			<p:selectItem itemLabel="koszykowka" itemValue="koszykowka" id="koszykowka"></p:selectItem>
 			<p:selectItem itemLabel="siatkowka" itemValue="siatkowka" id="siatkowka"></p:selectItem>
@@ -51,7 +52,7 @@
 		<br /><br />
 		
 		
-		<h:commandButton type="button"  class="btn btn-primary btn-md" action="submit" value="Zarejestruj!"></h:commandButton>
+		<h:commandButton type="button" class="btn btn-primary btn-md" action="submit" value="Zarejestruj!"></h:commandButton>
 		
 		</h:form>
 
