@@ -19,16 +19,28 @@
 		<h:graphicImage value="res/registration.jpg"
 			style="width: 277px; height: 114px; "></h:graphicImage> <br />
 			
-		<h:outputText value="Login:"></h:outputText>
-		<h:inputText class="form-control" value="#{User.login}"></h:inputText> <br />
+		<h:outputText value="Login:" > </h:outputText>
+		<h:inputText class="form-control" value="#{User.login}" required="true"  id="loginInput"  requiredMessage="Login jest wymagany" validatorMessage="Login powienien byc dluzszy niz 3 znaki i krotszy niz 8"> 
+			<f:validateLength minimum="3" maximum="8" /> 
+		</h:inputText>
+		<h:message for="loginInput" style="color:red" />
+		<br />
+		
 		<h:outputText value="Haslo:"></h:outputText>
-		<h:inputSecret  class="form-control" value="#{User.haslo}"></h:inputSecret>	<br /><br />
+		<h:inputSecret  class="form-control" required="true" value="#{User.haslo}" id="passInput"  requiredMessage="Haslo jest wymagane" validatorMessage="Haslo powinno byc dluzsze niz 3 znaki i krotsze niz 8"> 
+			<f:validateLength minimum="3" maximum="8" /> 
+		</h:inputSecret>	
+		<h:message for="passInput" style="color:red" />
+		<br />
+		<br /><br />
 		
 		<h:outputText value="Plec:"></h:outputText>
-		<h:selectOneRadio value="#{User.plec}">
+		<h:selectOneRadio required="true" value="#{User.plec}" id="plecInput" requiredMessage="Pole wymagane">
 			<p:selectItem itemValue="Mezczyzna" itemLabel="Mezczyzna"></p:selectItem>
 			<p:selectItem itemLabel="Kobieta" itemValue="Kobieta"></p:selectItem>
-		</h:selectOneRadio><br />
+		</h:selectOneRadio>
+		<h:message for="plecInput" style="color:red" />
+		<br />
 		<br />
 
 		<h:outputText value="Miasto:"></h:outputText>
